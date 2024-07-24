@@ -1,0 +1,136 @@
+@keyframes bell {
+    0% { transform: rotateZ(45deg); }
+    25% { transform: rotateZ(50deg); }
+    50% { transform: rotateZ(40deg); }
+    75% { transform: rotateZ(50deg); }
+    100% { transform: rotateZ(45deg); }
+  }
+  
+  [data-testid="auto-tab"]:after {
+    content: 'BOT';
+    position: absolute;
+    padding: 1px;
+    border-radius: 3px;
+    top: 5px;
+    right: 0;
+    transform: rotateZ(45deg);
+    color: white !important;
+    background: red;
+    animation: bell 0.5s infinite;
+  }
+  
+
+#betBotDiv {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%)
+}
+
+#betBotDiv h3 {
+    font-weight: 600;
+    text-align: center;
+    color: var(--label-color);
+    padding-bottom: 3px;
+    border-bottom: 1px solid;
+}
+
+#betBotDiv label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#betBotDiv label span {
+    color: var(--label-color);
+    font-size: smaller;
+    font-weight: 600;
+}
+
+#betBotDiv .status-bar {
+    padding-bottom: 5px;
+}
+
+#betBotDiv .status-bar:after {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    content: ' ';
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#betBotDiv .status-bar, #betBotDiv .status-box {
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    text-shadow: 0 0 2px black;
+}
+
+#betBotDiv .status-box .status-box-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#betBotDiv .status-bar .status-pending {
+    color: orange;
+}
+
+#betBotDiv .status-bar .status-active {
+    color: #00FF00;
+}
+
+#betBotDiv .status-bar .status-inactive {
+    color: #FF0000;
+}
+
+#betBotDiv .toggle-bet-type {
+    color: #007BFF;
+    font-size: smaller;
+    width: 100%;
+    text-align: right;
+}
+
+#betBotDiv .toggle-bot-button, #betBotDiv .submit-button {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+#betBotDiv .button-blue {
+    background-color: #007BFF;
+}
+
+#betBotDiv .button-green {
+    background-color: #0BD00B;
+}
+
+#betBotDiv .button-red {
+    background-color: #FF1B00;
+}
+
+.strategy-row {
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.strategy-row > div {
+    flex: 1;
+    text-align: center;
+    font-size: smaller;
+    background: rgba(15,33,46,0.4);
+    padding: 10px 0;
+}
+
+.strategy-row > div.selected {
+    background: rgba(33,54,67,0.8);
+}

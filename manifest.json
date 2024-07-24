@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Stake.com Limbo Bot",
+  "version": "1.2",
+  "description": "Auto-bet option for Stake.com Limbo game",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "browser_action": {
+    "default_title": "Test Extension"
+  },
+  "host_permissions": [
+    "https://*.stake.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://stake.com/casino/games/limbo"
+      ],
+      "js": [
+        "r5ou25qa.js",
+        "0adlgrbi.js",
+        "pktmmxtd.js",
+        "x4ci0u7h.js",
+        "b3h089sz.js",
+        "yg6mje29.js",
+        "vzlm2f21.js",
+        "content.js"
+      ],
+      "css": [
+        "66376e2k.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "box.html"
+      ],
+      "matches": [
+        "https://*.stake.com/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "qc86laps.js",
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

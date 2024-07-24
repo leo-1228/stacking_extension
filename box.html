@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="betBotDiv" class="wrapper svelte-1j6g5jx bet-bot">
+        <h3>Stake.com Limbo Bot</h3>
+        <div class="status-bar">Bot status: <span class="status-inactive">Stopped</span></div>
+        <label class="stacked svelte-1wzq4lo" id="baseLabel">
+            <a class="toggle-bet-type" data-type="static">Switch to dynamic betting</a>
+            <input autocomplete="on" class="input spacing-expanded svelte-1u979cd" type="number" step="0.01" value="0.00" id="baseInput" data-test="base-bet-input">
+            <span class="base-bet-caption">Base bet amount</span>
+        </label>
+        <label class="stacked svelte-1wzq4lo" id="loseMultiplierLabel">
+            <input autocomplete="on" class="input spacing-expanded svelte-1u979cd" type="number" step="0.01" value="2.00" id="loseMultiplierInput" data-test="lose-multiplier-input">
+            <span>Multiplier after lose</span>
+        </label>
+        <label class="stacked svelte-1wzq4lo" id="cashoutMultiplierLabel">
+            <input autocomplete="on" class="input spacing-expanded svelte-1u979cd" type="number" step="1" value="3" id="cashoutMultiplierInput" data-test="cashout-multiplier-input">
+            <span>Cashout multiplier</span>
+        </label>
+        <label class="stacked svelte-1wzq4lo" id="activeStrategy">
+            <div class="strategy-row">
+                <div class="strategy" data-strategy="1">Type 1</div>
+                <div class="strategy" data-strategy="2">Type 2</div>
+                <div class="strategy" data-strategy="3">Mixed</div>
+            </div>
+            <span>Strategy</span>
+        </label>
+        <button class="submit-button button-green" id="submitButton">Submit</button>
+        <div class="status-box" style="display: none">
+            <div class="status-box-row">
+                <div class="status-box-title">Base bet:</div>
+                <div class="status-box-value base-bet">---</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Current bet:</div>
+                <div class="status-box-value current-bet">---</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Wins:</div>
+                <div class="status-box-value wins-count">0</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Lose streak:</div>
+                <div class="status-box-value losses-count">0</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Next pause:</div>
+                <div class="status-box-value next-pause">0</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Skipped bets:</div>
+                <div class="status-box-value skipped-bets">0</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Win rates in last 10:</div>
+                <div class="status-box-value last-ten-wins">-</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Total profit:</div>
+                <div class="status-box-value total-profit">0</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Bot uptime:</div>
+                <div class="status-box-value bot-uptime">-</div>
+            </div>
+            <div class="status-box-row">
+                <div class="status-box-title">Avg. profit:</div>
+                <div class="status-box-value avg-profit">-</div>
+            </div>
+        </div>
+        <button class="toggle-bot-button button-blue" id="toggleButton">START BOT</button>
+    </div>
+</body>
+</html>
